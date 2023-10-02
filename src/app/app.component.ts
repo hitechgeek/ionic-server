@@ -116,6 +116,6 @@ export class AppComponent {
         myElement.style.backgroundColor = color; // Set background color
       }
       return color;
-    }, 15);
+    }, 1000); // the timer has been increased
   }
 }
