@@ -1,0 +1,46 @@
+<ion-app id="body" (click)="generateRandomColours()">
+  <!-- <ion-router-outlet></ion-router-outlet> -->
+  <span
+    style="
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      min-height: 100vh;
+    "
+    *ngIf="!isVerified"
+    (click)="checkStatus()"
+  >
+    Locked. Unlock Now
+  </span>
+  <!-- <span
+    style="
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+    "
+    *ngIf="isVerified"
+    (click)="takePicture()"
+  >
+    Take Picture
+  </span> -->
+  <span
+    style="
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      min-height: 100vh;
+      color: blueviolet;
+    "
+    *ngIf="isVerified"
+    (click)="generateRandomColours()"
+    >Click here</span
+  >
+  <p *ngIf="isVerified">Verified Successfully</p>
+  <p *ngIf="!isVerified">Not Verified Successfully</p>
+</ion-app>
