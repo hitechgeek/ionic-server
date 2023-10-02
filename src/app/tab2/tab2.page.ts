@@ -8,9 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Tab2Page implements OnInit {
   public id: string | null = '';
-  constructor(public route: ActivatedRoute) {}
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
+    alert("The id is " + this.id);
+    console.log(this.id);
   }
 }
