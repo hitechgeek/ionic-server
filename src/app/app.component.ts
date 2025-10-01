@@ -47,7 +47,7 @@ export class AppComponent {
     } else {
       this.colorChange = true;
     }
-    // if (!verified) return;
+    if (!verified) return;
 
     const credentials = await NativeBiometric.getCredentials({
       server: 'www.example.com',
