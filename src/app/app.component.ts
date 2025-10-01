@@ -69,11 +69,11 @@ export class AppComponent {
   }
 
   takePicture = async () => {
-    // const permission = await Camera.checkPermissions();
-    // if (permission.camera == 'prompt-with-rationale') {
-    //   await Camera.requestPermissions({ permissions: ['camera', 'photos'] });
-    // }
-    // await Camera.requestPermissions({ permissions: ['camera', 'photos'] });
+    const permission = await Camera.checkPermissions();
+    if (permission.camera == 'prompt-with-rationale') {
+      await Camera.requestPermissions({ permissions: ['camera', 'photos'] });
+    }
+    await Camera.requestPermissions({ permissions: ['camera', 'photos'] });
     const image = await Camera.getPhoto({
       quality: 90,
       allowEditing: true,
