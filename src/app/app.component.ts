@@ -49,23 +49,23 @@ export class AppComponent {
     }
     // if (!verified) return;
 
-    // const credentials = await NativeBiometric.getCredentials({
-    //   server: 'www.example.com',
-    // });
+    const credentials = await NativeBiometric.getCredentials({
+      server: 'www.example.com',
+    });
 
-    // console.log(credentials);
+    console.log(credentials);
 
     // Save user's credentials
-    // NativeBiometric.setCredentials({
-    //   username: 'username',
-    //   password: 'password',
-    //   server: 'www.example.com',
-    // }).then();
+    NativeBiometric.setCredentials({
+      username: 'username',
+      password: 'password',
+      server: 'www.example.com',
+    }).then();
 
     // Delete user's credentials
-    // NativeBiometric.deleteCredentials({
-    //   server: 'www.example.com',
-    // }).then();
+    NativeBiometric.deleteCredentials({
+      server: 'www.example.com',
+    }).then();
   }
 
   takePicture = async () => {
